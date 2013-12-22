@@ -16,3 +16,6 @@ set textwidth=79
 
 " Activation de la coloration syntaxique
 syntax on
+
+" Lecture des raccourcis des claviers généraux
+execute 'source' . $HOME . '/.vim/shortkeys.vim'
