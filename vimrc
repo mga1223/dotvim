@@ -60,4 +60,8 @@ EOF
 autocmd FileType python set ft=python.django
 autocmd FileType html set ft=htmlpython.html
 
+" Activation de la barre de statut de fugitive
+set laststatut=2
+set statutline=[%l,%v\ %P%M]\ %f %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+
 
