@@ -56,4 +56,8 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this,dict(__file__=activate))
 EOF
 
+" Activation des snippets Django pour les fichiers python et html
+autocmd FileType python set ft=python.django
+autocmd FileType html set ft=htmlpython.html
+
 
