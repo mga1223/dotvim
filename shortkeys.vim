@@ -19,4 +19,8 @@ map <C-t> <Plug>TaskList
 " Affichage de l'historique des modifications
 map <C-h> <Esc>:GundoToggle<CR>
 
+" Execution de test unitaire
+nmap <silent><Leader>tf <Esc>:pytest file<CR>
+nmap <silent><Leader>tc <Esc>:pytest class<CR>
+nmap <silent><Leader>tm <Esc>:pytest method<CR>
 
