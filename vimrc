@@ -64,4 +64,22 @@ autocmd FileType html set ft=htmlpython.html
 set laststatut=2
 set statutline=[%l,%v\ %P%M]\ %f %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
+" Variable d'enregistrement de l'état de la gestion de la souris
+let s:mouseActivation = 1
+
+" Fonction permettant l'activation/désactivation de la gestion de la souris
+function! ToggleMouseActivation()
+  if (s:mouseActivation)
+      let s:mouseActivation = 0
+      set mouse=n
+      set paste
+      call s:DisplayStatus('Désactivation de la gestion de la souris (mode '.'collage)')
+  else
+      let s:mouseActivation = 1
+      set mouse=a
+      set nopaste
+      call s:DisplayStatus('Activation de la gestion de la souris (mode normal)')
+  endif
+endfunction
+
 
