@@ -86,3 +86,20 @@ endfunction
 set mouse=a
 set nopaste
 
+" Fonction de nettoyage de fichier
+"    -remplacement de tabulation par des espaces
+"    -suppression des catractères ^M en fin de ligne
+function! CleanCode
+	%retab
+	%s/^M//g
+	call s:DisplayStatus('Code nettoyé')
+endfunction
+
+" Affichage des numéros de ligne
+set number
+higlight LineNr ctermbg=blue ctermfg=gray
+
+" Surligne la colonne du dernier caractère autorisé par textwidth
+set cc=+1
+
+
