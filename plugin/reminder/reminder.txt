@@ -1,0 +1,7 @@
+VIM REMINDER
+
+<F1> : Affiche/Masque cette aide
+
+<F2> : Recherche dans djangoproject.com l'aide sur le mot se trouvant sous le curseur
+
+<F3> : Appel la fonction de nettoyage du fichier, enlève les ^M et transforme les tabulations en espaces.
