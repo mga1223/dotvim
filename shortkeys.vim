@@ -24,3 +24,6 @@ nmap <silent><Leader>tf <Esc>:pytest file<CR>
 nmap <silent><Leader>tc <Esc>:pytest class<CR>
 nmap <silent><Leader>tm <Esc>:pytest method<CR>
 
+" Appel de la fonction d'activation/desactivation de la gestion de la souris
+map <F4> <Esc>:call ToggleMouseActivation()<CR>
+
