@@ -82,4 +82,7 @@ function! ToggleMouseActivation()
   endif
 endfunction
 
+" Activation par defaut au demarrage de la gestion de la souris
+set mouse=a
+set nopaste
 
