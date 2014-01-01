@@ -2,7 +2,7 @@ This project is a Vim configuration Python and Django dedicated.
 
 Installation:
 
-    git clone git://github.com/mga1213/dotvim.git ~/.vim
+    git clone git://github.com/mga1223/dotvim.git ~/.vim
 
 
 Create symlink:
