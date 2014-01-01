@@ -102,4 +102,32 @@ higlight LineNr ctermbg=blue ctermfg=gray
 " Surligne la colonne du dernier caractère autorisé par textwidth
 set cc=+1
 
+" Definition de l'état de l'affichage de l'aide mémoire
+let reminderDisplay = 0
 
+" Fonction de lecture et d'affichage de l'aide mémoire
+function Reminder()!
+	if g:reminderDisplay == 0
+		silent! topleft vertical 40split +buffer Reminder
+		let g:reminderDisplay = 1
+		set buftype=nofile
+		0read $HOME/.vim/plugin/reminder/reminder.txt
+		set nonumber
+		highlight Memory ctermfg=white ctermbg=blue
+		3match Memory /*.\+\ \+:/
+	else
+		bdelete Reminder
+		let g:reminderDisplay = 0
+	endif
+endfunction
+
+" Definition du raccourci par défaut
+if !hasmapto('Plug>Rminder')
+	map <unique> <F1> <Plug>Reminder
+	imap <unique> <F1> <Plug>Reminder
+endif
+
+nnoremap <unique> <script> <Plug>Reminder :call Reminder()<CR>
+" }}}
+
+	
